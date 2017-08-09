@@ -34,7 +34,7 @@
         <activity-alias android:label="GREEN"
                         android:icon="@drawable/ic_android_green"
                         android:name="com.pritesh.resourceidentifierexample.MainActivity-Green"
-                        android:enabled="false"
+                        android:enabled="true"
                         android:targetActivity="com.pritesh.resourceidentifierexample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,7 +46,7 @@
         <activity-alias android:label="BLUE"
                         android:icon="@drawable/ic_android_blue"
                         android:name="com.pritesh.resourceidentifierexample.MainActivity-Blue"
-                        android:enabled="false"
+                        android:enabled="true"
                         android:targetActivity="com.pritesh.resourceidentifierexample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

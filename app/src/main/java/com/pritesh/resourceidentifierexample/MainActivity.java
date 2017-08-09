@@ -14,19 +14,25 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity
 {
-    ActionBar mActionBar;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        setDynamicActivityLogo();
+
+
+        imageView = (ImageView)findViewById(R.id.imageView);
+        //imageView.setImageResource(R.drawable.ic_action_snow);
+
+        int imgRId = this.getResources().getIdentifier("ic_action_snow", "drawable", this.getPackageName());
+        imageView.setImageResource(imgRId);
+        //setDynamicActivityLogo();
     }
 
     private void setDynamicActivityLogo()
     {
-        ImageView imageView = (ImageView)findViewById(R.id.imageView);
+
         int imageResourceId;
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         int hours = new Time(System.currentTimeMillis()).getHours();
@@ -41,7 +47,7 @@ public class MainActivity extends AppCompatActivity
             getPackageManager().setComponentEnabledSetting(
                     new ComponentName("com.pritesh.resourceidentifierexample", "com.pritesh.resourceidentifierexample.MainActivity-Red"),
                     PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-        }else if(hours == 14)
+        }else if(hours == 18)
         {
             imageResourceId = this.getResources().getIdentifier("ic_android_green", "drawable", this.getPackageName());
             getPackageManager().setComponentEnabledSetting(
